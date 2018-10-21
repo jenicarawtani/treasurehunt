@@ -8,11 +8,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+// import { ChallengeCardComponent } from './components/challenge-card/challenge-card.component';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  // exports: [ChallengeCardComponent],
   providers: [
     StatusBar,
     SplashScreen,

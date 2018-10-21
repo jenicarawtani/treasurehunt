@@ -1,1 +1,109 @@
+i.icon.ion-trophy {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	max-width: 80px;
+	max-height: 80px;
+	width: 100%;
+	font-size: 80px;
+	height: 100%;
+	color: #80D6AC;
+}
 
+.score {
+	position: absolute;
+	top: 0px;
+	left: 6px;
+	width: 80px;
+	max-height: 80px;
+	font-size: 30px;
+	line-height: 80px;
+	color: white;
+	z-index: 300;
+	text-align: center;
+}
+
+/*Leaderboard tab - item divider*/
+.item-divider span {
+  padding-left: 10px;
+}
+
+/*current top three*/
+.trophy-image-0{
+  background-color: #DAA520;
+  margin-top: 5.5px;
+  width: 48px;
+  height: 48px;
+  /*background-image: url('../../assets/icon/trophy-white.svg');*/
+  display: inline-block;
+  border-radius: 50%;
+  float: left;
+  background-position: 16px;
+  background-repeat: no-repeat;
+  left: 16px;
+  top: 16px;
+  position: absolute;
+}
+.trophy-image-1{
+  background-color: #e0e0e0;
+  margin-top: 5.5px;
+  width: 48px;
+  height: 48px;
+  /*background-image: url('../../assets/icon/trophy-white.svg');*/
+  display: inline-block;
+  border-radius: 50%;
+  float: left;
+  background-position: 16px;
+  background-repeat: no-repeat;
+  left: 16px;
+  top: 16px;
+  position: absolute;
+}
+.trophy-image-2{
+  margin-top: 5.5px;
+  width: 48px;
+  height: 48px;
+  /*background-image: url('../../assets/icon/trophy-white.svg');*/
+  display: inline-block;
+  border-radius: 50%;
+  float: left;
+  background-position: 16px;
+  background-repeat: no-repeat;
+  left: 16px;
+  top: 16px;
+  position: absolute;
+  background-color: #A0522D;
+}
+
+/*best of the rest*/
+.current-place {
+  margin-top: 5.5px;
+  position: absolute;
+  max-height: 80px;
+  font-size: 22px;
+  font-family: "Helvetica Neue";
+  line-height: 50px;
+  color: white;
+  text-align: center;
+  background-color: #7f7f7f;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  border-radius: 50%;
+  float: left;
+  left: 16px;
+  top: 16px;
+}
+
+
+/*Team label for dashboard */
+
+.teamLabel {
+	background: #2196f3;
+    padding: 8px;
+    border-radius: 5px;
+	color: white;
+    margin: 8px !important;
+    
+
+}

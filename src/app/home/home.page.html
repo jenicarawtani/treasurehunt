@@ -1,10 +1,42 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Leaderboard</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+
+<ion-content>
+	<ion-list>
+        <div *ngFor="let team of teams; index as index" >
+			<div *ngIf="index === 0" class="item item-divider"><span>Current Top Three</span></div>
+			<div *ngIf="index === 3" class="item item-divider"><span>Best of the rest</span></div>
+			<ion-item class="item item-avatar" ng-click="openModal(team)">
+            <span ng-class="{'trophy-image-0': index === 0, 'trophy-image-1': index === 1, 'trophy-image-2': $index === 2, 'current-place': index > 2}">{{index > 2 ? index+1 : ''}}</span>
+            <div class="row">
+            	<!-- <ion-label> -->
+	              <div class="col">
+	                {{team.team_name}}
+	                <p>{{team.overall_score}} points</p>
+	              </div>
+	              <!-- <div ng-if="team.team_name === activeUser.team" class="col-1">
+	              	<h2 class="teamLabel">My team</h2>
+	              </div> -->
+             	<!-- </ion-label> -->
+            </div>
+			</ion-item>
+		</div>
+	</ion-list>
+				<!--
+					<ion-item class="item-accordion" ng-repeat="item in team.team_members " ng-show="isGroupShown(team)">
+						{{item.name}}
+					</ion-item>
+-->
+			<!--
+    <div ng-repeat="team in teams">
+		<div>Team rank - {{$index+1}}</div>
+		<div>{{team.name}}</div>
+		<div>{{team.overall_score}}</div>
+	  </div>
+-->
+
 </ion-content>
