@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { ChallengeCardComponent } from './challenge-card/challenge-card.component';
 
 
@@ -11,6 +13,7 @@ import { ChallengeCardComponent } from './challenge-card/challenge-card.componen
     ChallengeCardComponent
   ],
   imports: [
+    CommonModule,
     IonicModule
   ]
 })

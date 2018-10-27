@@ -8,7 +8,7 @@ import { TabsPageRoutingModule } from './tabs.router.module';
 
 import { TabsPage } from './tabs.page';
 import { ContactPageModule } from '../contact/contact.module';
-import { AboutPageModule } from '../about/about.module';
+import { QuestionsPageModule } from '../questions/questions.module';
 import { HomePageModule } from '../home/home.module';
 import { InfoPageModule } from '../info/info.module';
 
@@ -19,7 +19,7 @@ import { InfoPageModule } from '../info/info.module';
     FormsModule,
     TabsPageRoutingModule,
     HomePageModule,
-    AboutPageModule,
+    QuestionsPageModule,
     ContactPageModule,
     InfoPageModule
   ],

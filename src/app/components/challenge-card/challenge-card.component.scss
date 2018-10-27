@@ -1,0 +1,64 @@
+
+.chalCard {
+	text-align: center;
+}
+
+.chalCard .item-complex .item-content,
+.item-radio .item-content {
+	padding: 0px 0px 30px 0px;
+}
+
+.chalPoints {
+	border-radius: 201px;
+	background: #2196f3;
+	/* padding: 50px; */
+
+	height: 110px;
+	color: white;
+/*	font-size: 30px;*/
+	max-width: 110px;
+	text-align: center;
+/*	line-height: 110px;*/
+	margin: 20px 0px 10px 0px;
+}
+
+.newChal {
+	background: rgba(123, 201, 253, 1);
+}
+
+.correctChal {
+	background: rgba(147, 203, 70, 1);
+}
+
+.failedChal {
+	background: rgba(219, 3, 5, 1);
+}
+
+i.icon.ion-trophy {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	max-width: 80px;
+	max-height: 80px;
+	width: 100%;
+	font-size: 80px;
+	height: 100%;
+	color: #80D6AC;
+}
+
+.score {
+	position: absolute;
+	top: 0px;
+	left: 6px;
+	width: 80px;
+	max-height: 80px;
+	font-size: 30px;
+	line-height: 80px;
+	color: white;
+	z-index: 300;
+	text-align: center;
+}
+
+body {
+	cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}

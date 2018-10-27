@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{challenge.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+   <div class="challenge-content-holder">
+    <div class="challenge-image-and-question-holder">
+    <!-- <img ng-src="{{challenge.question_photo ? 'img/content/' + challenge.question_photo : 'img/default-image.jpg'}}" style="width: 100%; height: auto"> -->
+    <div class="challenge-text-bg">
+        <div class="challenge-text-holder">
+            <h3 class="challenge-info">{{challenge.challengeName}}&nbsp;&nbsp;&bull;&nbsp;&nbsp;{{challenge.points}} points</h3>
+            <h2 class="challenge-text">{{challenge.question_or_challenge_text}}</h2>
+        </div>
+    </div>
+    </div>
+	  <div ng-if="challenge.question_or_challenge === 'Question'" class="challenge-actions-holder">
+	  <div class="row responsive-sm">
+	  <div class="col col-50"><button ng-disabled="submitted" class="button button-positive button-block challenge-option" ng-click="model.selected = challenge.option1" ng-class="{'choice-selected': model.selected === challenge.option1}">{{challenge.option1}}</button>
+		  </div>
+		  <div class="col col-50"><button ng-disabled="submitted" class="button button-positive button-block challenge-option" ng-click="model.selected = challenge.option2" ng-class="{'choice-selected': model.selected === challenge.option2}">{{challenge.option2}}</button>
+		  </div>
+	  </div>
+	  <div class="row responsive-sm">
+	  <div class="col col-50"><button ng-disabled="submitted"  class="button button-positive button-block challenge-option" ng-click="model.selected = challenge.option3" ng-class="{'choice-selected': model.selected === challenge.option3}">{{challenge.option3}}</button>
+		  </div><div class="col col-50"><button ng-disabled="submitted"  class="button button-positive button-block challenge-option" ng-click="model.selected = challenge.option4" ng-class="{'choice-selected': model.selected === challenge.option4}">{{challenge.option4}}</button>
+		  </div>
+	  </div>
+		  <button ng-disabled="submitted" class="button button button-calm button-block submit-question-button" ng-click="submitAnswer(challenge);">Submit Answer</button>
+		  </div>
+	  <div ng-if="challenge.question_or_challenge === 'Challenge'" class="challenge-actions-holder">
+		  <div ng-if="!submitted">
+					<div class="row">
+					<canvas id="canvas" class="col" height="300" style="border: dashed 2px #d9d9d9;border-radius: 5px; ; max-height: 300px" img="img/upload-photo-text.svg"></canvas>
+					<canvas id="blank" class="col" height="300" style="display: none; border: dashed 2px #d9d9d9;border-radius: 5px; max-height: 300px" img="img/upload-photo-text.svg"></canvas>
+					</div>
+					<div class="row responsive-sm">
+						<div class="col col-50">
+							<button class="button button-positive button-block" ng-click="getPhoto();">Take photo</button>
+						</div>
+						<div class="col col-50">
+							<button class="button button-positive button-block" ng-click="selectPicture()">Upload photo</button>
+						</div>
+						
+					</div>
+					<div class="row">
+						<button class="button button-positive button-block submit-question-button" ng-click="submitPicture(challenge)">Submit</button>
+					</div>
+		  </div>
+		  <div ng-if="submitted">Challenge complete!</div>
+		  </div>
+    </div>
+  </ion-content>

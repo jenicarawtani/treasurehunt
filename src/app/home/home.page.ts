@@ -10,7 +10,6 @@ import { ItemService } from '../services/item.service';
 
 export class HomePage implements OnInit {
 
-  items: Array<any>;
   teams: Array<any>;
 
   constructor(
@@ -19,7 +18,6 @@ export class HomePage implements OnInit {
   ){}
 
   ngOnInit(){
-    this.items = this.itemService.getItems();
     this.teams = this.itemService.getTeams();
   }
 

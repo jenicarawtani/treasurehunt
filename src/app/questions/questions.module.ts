@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AboutPage } from './about.page';
+import { QuestionsPage } from './questions.page';
 import { ComponentsModule } from '../components/component.module';
 
 
@@ -14,8 +14,8 @@ import { ComponentsModule } from '../components/component.module';
     CommonModule,
     FormsModule,
     ComponentsModule,
-    RouterModule.forChild([{ path: '', component: AboutPage }])
+    RouterModule.forChild([{ path: '', component: QuestionsPage }])
   ],
-  declarations: [AboutPage]
+  declarations: [QuestionsPage]
 })
-export class AboutPageModule {}
+export class QuestionsPageModule {}

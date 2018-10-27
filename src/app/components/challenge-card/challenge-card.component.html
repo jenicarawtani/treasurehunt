@@ -1,3 +1,40 @@
-<p>
-  challenge-card works!
-</p>
+<ion-col size="4">
+	<ion-card class="chalCard">
+		<!--				<div class="item item-text-wrap">-->
+		<ion-item class="item-remove-animate" type="item-text-wrap" (click)="openChallengePage(challenge.answered, challenge.locked, type, challenge.id)"  href="javascript:void(0)" ng-class="{locked : challenge.locked === 'y' || challenge.locked === 'Y'}">
+			<!--href="#/tab/{{type}}/{{challenge.id}}"-->
+			<!--						<img ng-src="{{challenge.face}}">-->
+			<div *ngIf="type === 'challenges'" class="completion-tag" ng-class="{correctChal: challenge.answered === 'y', failedChal: challenge.answered === 'n'}">{{challenge.answered ? (challenge.answered === "y" ? 'Success': 'Failed') : ''}}</div>
+			<ion-row *ngIf="type === 'challenges'">
+				<ion-col size="auto"></ion-col>
+				<ion-col size="8" class="chalPoints" style="overflow: hidden; line-height: 109px" ng-class="{correctChal: challenge.answered === 'y', failedChal: challenge.answered === 'n'}">
+					<div *ngIf="!challenge.answered">
+						<h1 style="color: white; margin-top: 25px !important; margin-bottom: -48px !important;">{{challenge.points}}</h1>
+						<span>points</span>
+					</div>
+					
+					<!-- <img *ngSrc="{{challenge.answered  ? ( challenge.answered === 'y' ? 'img/happy-white.svg' : 'img/sad-white.svg') : challenge.face}}" style="width: 50%; vertical-align: middle"> -->
+
+				</ion-col>
+				<ion-col size="auto"></ion-col>
+			</ion-row>
+			
+			<ion-row *ngIf="type === 'treasure'">
+				<ion-col size="auto"></ion-col>
+				<div class="chalPoints col-60" style="overflow: hidden; line-height: 109px" ng-class="{correctChal: challenge.answered === 'y' || challenge.hunted === 'y', failedChal: challenge.answered === 'n'}">
+					<div *ngIf="!challenge.answered && !challenge.hunted">
+						<h1 style="color: white; margin-top: 25px !important; margin-bottom: -48px !important;">{{challenge.points}}</h1>
+						<span>points</span>
+					</div>
+					<!-- <img *ngSrc="{{challenge.answered  ? ( challenge.answered === 'y' ? 'img/happy-white.svg' : 'img/sad-white.svg') : (challenge.hunted === 'y' ? 'img/unlocked-icon.svg' : challenge.face)}}" style="width: 50%; vertical-align: middle"> -->
+				</div>
+				<ion-col size="auto"></ion-col>
+			</ion-row>
+
+			<h2>{{type === 'treasure' ? challenge.location_name : challenge.challengeName }}</h2>
+			<p>{{type === 'treasure' ? challenge.clue_text : ' '}}</p>
+
+		</ion-item>
+	</ion-card>
+	<!--			</div>-->
+</ion-col>
